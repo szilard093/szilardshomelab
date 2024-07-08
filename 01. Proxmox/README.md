@@ -48,7 +48,9 @@ Before you begin, ensure you have the following:
 	•	Set it to Enabled.
 
 3. 	Enable PCIe ACS Override (if available):
+
 	•	This setting may help with splitting IOMMU groups, necessary for successful GPU passthrough.
+    
 	•	It might be found under Advanced settings or similar.    
 
 ## Step 3: Install Proxmox VE
