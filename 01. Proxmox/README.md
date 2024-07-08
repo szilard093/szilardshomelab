@@ -50,7 +50,7 @@ Before you begin, ensure you have the following:
 3. 	Enable PCIe ACS Override (if available):
 
 	•	This setting may help with splitting IOMMU groups, necessary for successful GPU passthrough.
-    
+
 	•	It might be found under Advanced settings or similar.    
 
 ## Step 3: Install Proxmox VE
@@ -59,9 +59,9 @@ Before you begin, ensure you have the following:
 	•	Select Install Proxmox VE and press Enter.
 	•	Accept the End User License Agreement (EULA).
     • Select the target hard drive for the installation. 
-        - During the disk selection process, you will be given the option to select the filesystem. It is recommended to choose `ZFS` for its advanced features like snapshots and data integrity protection.
-        - Select `ZFS` as the file system type.
-        - Choose the desired ZFS RAID level (e.g., RAID 1, RAID 10) based on your hardware configuration and redundancy needs.
+            • During the disk selection process, you will be given the option to select the filesystem. It is recommended to choose `ZFS` for its advanced features like snapshots and data integrity protection.
+            • Select `ZFS` as the file system type.
+            • Choose the desired ZFS RAID level (e.g., RAID 1, RAID 10) based on your hardware configuration and redundancy needs.
 	•	Configure the country, time zone, and keyboard layout. Click Next.
 	•	Set a strong password for the root user and provide a valid email address. Click Next.
 	•	Configure the network interface with a static IP address, netmask, gateway, and DNS server. Click Next.
