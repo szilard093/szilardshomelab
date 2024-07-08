@@ -37,10 +37,12 @@ Before you begin, ensure you have the following:
 
 1. 	Enable Virtualization Technology:
 	•	Look for a setting named Intel VT-x, Intel Virtualization Technology, AMD-V, or something similar. This is usually found under the Advanced or CPU Configuration tab.
+    
 	•	Set it to Enabled.
 
 2.	Enable IOMMU:
     •	Locate the IOMMU setting, which might be under Advanced, North Bridge, South Bridge, or AMD CBS depending on your motherboard.
+
 	•	Set it to Enabled.
 
 3. 	Enable PCIe ACS Override (if available):
@@ -49,16 +51,16 @@ Before you begin, ensure you have the following:
 
 ## Step 3: Install Proxmox VE
 
-    1.	Once booted from the USB, you will see the Proxmox installer boot menu.
-	2.	Select Install Proxmox VE and press Enter.
-	3.	Accept the End User License Agreement (EULA).
-    4. Select the target hard drive for the installation. 
+    •	Once booted from the USB, you will see the Proxmox installer boot menu.
+	•	Select Install Proxmox VE and press Enter.
+	•	Accept the End User License Agreement (EULA).
+    • Select the target hard drive for the installation. 
         - During the disk selection process, you will be given the option to select the filesystem. It is recommended to choose `ZFS` for its advanced features like snapshots and data integrity protection.
         - Select `ZFS` as the file system type.
         - Choose the desired ZFS RAID level (e.g., RAID 1, RAID 10) based on your hardware configuration and redundancy needs.
-	5.	Configure the country, time zone, and keyboard layout. Click Next.
-	6.	Set a strong password for the root user and provide a valid email address. Click Next.
-	7.	Configure the network interface with a static IP address, netmask, gateway, and DNS server. Click Next.
-	8.	Review the installation summary and click Install.
+	•	Configure the country, time zone, and keyboard layout. Click Next.
+	•	Set a strong password for the root user and provide a valid email address. Click Next.
+	•	Configure the network interface with a static IP address, netmask, gateway, and DNS server. Click Next.
+	•	Review the installation summary and click Install.
 
 The installation process will begin and may take several minutes to complete. Once finished, the system will prompt you to reboot.
