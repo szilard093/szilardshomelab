@@ -36,11 +36,13 @@ Before you begin, ensure you have the following:
 ## Step 2: Configure BIOS (GPU Passthrought)
 
 1. 	Enable Virtualization Technology:
+
 	•	Look for a setting named Intel VT-x, Intel Virtualization Technology, AMD-V, or something similar. This is usually found under the Advanced or CPU Configuration tab.
-    
+
 	•	Set it to Enabled.
 
 2.	Enable IOMMU:
+
     •	Locate the IOMMU setting, which might be under Advanced, North Bridge, South Bridge, or AMD CBS depending on your motherboard.
 
 	•	Set it to Enabled.
