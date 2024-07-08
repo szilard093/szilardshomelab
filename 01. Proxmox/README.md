@@ -57,6 +57,9 @@ Before you begin, ensure you have the following:
 
 Once booted from the USB, you will see the Proxmox installer boot menu.
 - Select Install Proxmox VE and press Enter.
+
+<img width="888" alt="image" src="https://github.com/szilard093/szilardshomelab/assets/112924133/455df803-7cf7-4dff-90cd-8dc0cc6e90a4">
+
 - Accept the End User License Agreement (EULA).
 - Select the target hard drive for the installation.
   - During the disk selection process, you will be given the option to select the filesystem. It is recommended to choose `ZFS` for its advanced features like snapshots and data integrity protection.
