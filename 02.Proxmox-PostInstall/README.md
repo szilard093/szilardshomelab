@@ -32,3 +32,12 @@ proxmox-boot-tool refresh
 
 And reboot.
 
+To check if everything works use:
+
+```sh
+dmesg | grep -i IOMMU
+```
+
+If You can see this then we are done!
+
+<img width="426" alt="Screenshot 2024-05-28 at 09 09 41" src="https://github.com/user-attachments/assets/cdc80160-ca74-4682-aaa0-3ed33e353e0a">
