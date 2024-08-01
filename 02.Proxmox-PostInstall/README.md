@@ -4,9 +4,9 @@ I think it's very useful to run ttech's scripts. (Thank you, ttech, for this exc
 
 Just copy and paste the following line into the shell window:
 
-\```sh
+```sh
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-pve-install.sh)"
-\```sh
+```
 It is recommended to answer yes (y) to everything.
 
 
