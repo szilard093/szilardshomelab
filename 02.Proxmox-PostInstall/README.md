@@ -40,4 +40,5 @@ dmesg | grep -i IOMMU
 
 If You can see this then we are done!
 
-<img width="426" alt="Screenshot 2024-05-28 at 09 09 41" src="https://github.com/user-attachments/assets/cdc80160-ca74-4682-aaa0-3ed33e353e0a">
+![Screenshot 2024-08-01 at 20 26 44](https://github.com/user-attachments/assets/48251fad-2c9c-4afe-8960-50f605e72776)
+
