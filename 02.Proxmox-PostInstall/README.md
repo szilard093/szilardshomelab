@@ -1,44 +1,68 @@
-After rebooting Proxmox and successfully logging into the GUI (https://yourIP:8006), open a shell by clicking on your server and then clicking on the `>_Shell` button in the top right corner.
+Setting Up Proxmox Post-Installation
 
-I think it's very useful to run ttech's scripts. (Thank you, ttech, for this excellent work.)
+After rebooting Proxmox and successfully logging into the GUI (https://yourIP:8006), follow these steps to configure your server:
 
-Just copy and paste the following line into the shell window:
+1. Access the Shell
+
+	1.	Open the Proxmox web interface.
+	2.	Click on your server in the left sidebar.
+	3.	Click the >_ Shell button in the top right corner.
+
+2. Run ttech’s Scripts (Thank you, ttech, for this excellent work.)
+
+Run the Post-Installation Script:
+
+Copy and paste the following line into the shell window:
 
 ```sh
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-pve-install.sh)"
 ```
 It is recommended to answer yes (y) to everything.
 
+(Optional) Optimize Power Consumption:
 
-Optionally, to reduce the power consumption of the server, you can run the following script from ttech as well:
+If you want to reduce the power consumption of your server, you can run this script:
+
 
 ```sh
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/scaling-governor.sh)"
 ```
 
-Again optionally, if you want to use hardware transcoding in the future, for example, for Jellyfin or Plex (and you have compatible hardware with Intel QuickSync) or if you want to virtualize a NAS, it is recommended to enable PCI Passthrough.
+3. Enable PCI Passthrough (Optional)
 
-First, you need to add intel_iommu=on to the /etc/kernel/cmdline. You can do this by running the following command in the shell:
+Add IOMMU Support:
+
+
+	1.	Edit the /etc/kernel/cmdline file to include intel_iommu=on. Run:
+
+
+If you plan to use hardware transcoding (e.g., for Jellyfin or Plex with Intel QuickSync) or virtualize a NAS, enabling PCI Passthrough is recommended.
+
 
 ```sh
 sudo sed -i 's/$/ intel_iommu=on/' /etc/kernel/cmdline
 ```
 
-After editing the /etc/kernel/cmdline file, refresh the boot tool by running:
+
+	2.	Refresh the boot configuration with:
 
 ```sh
 proxmox-boot-tool refresh
 ```
 
-And reboot.
+	3.	Reboot the server.
 
-To check if everything works use:
+
+Verify IOMMU Support:
+
+After rebooting, check if IOMMU is enabled by running:
 
 ```sh
 dmesg | grep -i IOMMU
 ```
 
-If You can see this then we are done!
+If you see relevant output, IOMMU is successfully enabled!
+
 
 ![Screenshot 2024-08-01 at 20 26 44](https://github.com/user-attachments/assets/48251fad-2c9c-4afe-8960-50f605e72776)
 
