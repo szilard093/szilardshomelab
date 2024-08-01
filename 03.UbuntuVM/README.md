@@ -1,1 +1,97 @@
-Welcome to szilardshomelab repository! This repository contains the configurations and scripts I use to manage my personal homelab and a lot of guides. :)
+# Installing Ubuntu 24.04 Server on Proxmox
+
+## Steps
+
+### 1. Download Ubuntu 24.04 Server ISO
+
+1. Go to the [official Ubuntu download page](https://ubuntu.com/download/server).
+2. Download the Ubuntu 24.04 Server ISO image.
+
+### 2. Upload the ISO to Proxmox
+
+1. Open your Proxmox web interface.
+2. Navigate to `Your Node` -> `local` where you want to upload the ISO.
+. Choose `ISO Image` as the content type and upload the downloaded Ubuntu 24.04 Server ISO.
+
+### 3. Create a New Virtual Machine
+
+1. In the Proxmox web interface, go to `Datacenter` -> right clcik on the`Node` -> and click on `Create VM`.
+2. Fill in the basic configuration:
+   - **VM ID**: Choose a unique ID. ex. 100
+   - **Name**: Provide a name for your VM. ex Ubuntu24.04
+   - Check the start at boot.
+3. Click `Next`.
+
+### 4. Configure VM Settings
+
+1. **OS**:
+   - Select `Linux` as the operating system.
+   - Choose `Version` from the version dropdown, and select `6.x - 2.6 Kernel`.
+   - Choose `ISO image` what You downloaded.
+   - Click `Next`.
+
+2. **System**:
+   - Choose `Graphic card`: Default
+   - Choose `SCSI Controller`: VirtlO SCSI Single
+   - Choose `Machine`: q35 - if You want GPU passthroug
+   - Check the `Qemu Agent`
+   - Click `Next`.
+
+3. **Disk**:
+   - Choose the storage location and size for your VM disk.
+   - Use the default settings or adjust as needed.
+   - Click `Next`.
+
+4. **CPU**:
+   - Configure the number of cores and type of CPU.
+   - Click `Next`.
+
+5. **Memory**:
+   - Allocate memory (RAM) for your VM.
+   - Click `Next`.
+
+6. **Network**:
+   - Choose the network bridge and configure network settings.
+   - Click `Next`.
+
+7. **Confirm**:
+   - Review the settings and click `Finish` to create the VM.
+
+### 5. Configure Boot from ISO
+
+1. Select your newly created VM in the Proxmox web interface.
+2. Go to the `Hardware` tab and click on `CD/DVD Drive`.
+3. Choose `Use CD/DVD disc image file (iso)` and select the Ubuntu 24.04 ISO you uploaded.
+4. Click `OK`.
+
+### 6. Start the VM and Install Ubuntu
+
+1. Go to the `Summary` tab and click `Start` to power on the VM.
+2. Open the `Console` tab to view the VM console.
+3. Follow the on-screen instructions to install Ubuntu 24.04 Server:
+   - Choose the language and keyboard layout.
+   - Select `Install Ubuntu Server`.
+   - Follow the prompts to configure network settings, disk partitioning, and user account setup.
+   - Complete the installation and reboot the VM when prompted.
+
+### 7. Post-Installation
+
+1. Remove the Ubuntu ISO from the VM’s CD/DVD drive:
+   - Go to the `Hardware` tab.
+   - Click on `CD/DVD Drive`, then `Edit`.
+   - Choose `Do not use any media`.
+   - Click `OK`.
+
+2. Restart the VM to boot into the newly installed Ubuntu 24.04 Server.
+
+## Troubleshooting
+
+- **VM Won't Start**: Ensure that the ISO image is correctly uploaded and that the VM settings are properly configured.
+- **Installation Issues**: Verify the integrity of the downloaded Ubuntu ISO and check for compatibility issues.
+
+## Additional Resources
+
+- [Proxmox Documentation](https://pve.proxmox.com/wiki/Main_Page)
+- [Ubuntu 24.04 Server Release Notes](https://wiki.ubuntu.com/FocalFossa/ReleaseNotes)
+
+Feel free to contribute or suggest improvements to this guide. Happy virtualizing!
