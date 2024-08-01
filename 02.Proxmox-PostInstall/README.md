@@ -33,7 +33,7 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/scaling-go
 Add IOMMU Support:
 
 
-    1.Edit the /etc/kernel/cmdline file to include intel_iommu=on. Run:
+Edit the /etc/kernel/cmdline file to include intel_iommu=on. Run:
 
 
 If you plan to use hardware transcoding (e.g., for Jellyfin or Plex with Intel QuickSync) or virtualize a NAS, enabling PCI Passthrough is recommended.
@@ -44,13 +44,13 @@ sudo sed -i 's/$/ intel_iommu=on/' /etc/kernel/cmdline
 ```
 
 
-    2.Refresh the boot configuration with:
+Refresh the boot configuration with:
 
 ```sh
 proxmox-boot-tool refresh
 ```
 
-    3.Reboot the server.
+Reboot the server.
 
 
 Verify IOMMU Support:
