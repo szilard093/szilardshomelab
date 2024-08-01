@@ -30,28 +30,21 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/scaling-go
 
 3. Enable PCI Passthrough (Optional)
 
-Add IOMMU Support:
+If you plan to use hardware transcoding (e.g., for Jellyfin or Plex with Intel QuickSync) or virtualize a NAS, enabling PCI Passthrough is recommended.
 
+Add IOMMU Support:
 
 Edit the /etc/kernel/cmdline file to include intel_iommu=on. Run:
 
-
-If you plan to use hardware transcoding (e.g., for Jellyfin or Plex with Intel QuickSync) or virtualize a NAS, enabling PCI Passthrough is recommended.
-
-
 ```sh
-sudo sed -i 's/$/ intel_iommu=on/' /etc/kernel/cmdline
+sed -i 's/$/ intel_iommu=on/' /etc/kernel/cmdline
 ```
-
-
 Refresh the boot configuration with:
 
 ```sh
 proxmox-boot-tool refresh
 ```
-
 Reboot the server.
-
 
 Verify IOMMU Support:
 
@@ -62,7 +55,6 @@ dmesg | grep -i IOMMU
 ```
 
 If you see relevant output, IOMMU is successfully enabled!
-
 
 ![Screenshot 2024-08-01 at 20 26 44](https://github.com/user-attachments/assets/48251fad-2c9c-4afe-8960-50f605e72776)
 
