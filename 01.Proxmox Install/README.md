@@ -70,3 +70,5 @@ Once booted from the USB, you will see the Proxmox installer boot menu.
 - Configure the network interface with a static IP address, netmask, gateway, and DNS server. Click Next.
 - Review the installation summary and click Install.
 - The installation process will begin and may take several minutes to complete. Once finished, the system will prompt you to reboot.
+
+If successfully rebooted then please go to [Step 02](../02.Proxmox-PostInstall/README.md).
