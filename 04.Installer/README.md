@@ -26,4 +26,4 @@ I am continuously working to expand my list of supported applications. The follo
 	•	Vaultwarden: A self-hosted password manager that is compatible with Bitwarden clients.
 
 
-If you have any questions or feedback, feel free to reach out at mail@szilardshomelab.com. :)
+If you have any questions, feedback, or application requests, feel free to reach out at mail@szilardshomelab.com. :)
