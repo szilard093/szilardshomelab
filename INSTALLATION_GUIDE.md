@@ -20,7 +20,7 @@ Follow these steps to set up your server using the installer menu:
 	•	You will be asked to enter a Docker proxy network name. Provide the desired name for the Docker network.
 	5.	Reboot (if required):
 	•	If prompted, reboot your server to finalize the Docker and Docker Compose installation.
-### 2. Installing Portainer
+### 3. Installing Portainer
     1.	Open the Docker Menu:
 	•	First, open the menu and select option 2 (Docker).
 	2.	Select Portainer Installation:
@@ -35,4 +35,4 @@ Follow these steps to set up your server using the installer menu:
 	•	Set up a new user account with a strong password. Follow the prompts to create the account.
 	7.	Log In:
 	•	After creating the account, log in to Portainer using the credentials you just created.
-### 3. Installing Pihole + Cloudflare (DNS over HTTPS)
+### 4. Installing Pihole + Cloudflare (DNS over HTTPS)
