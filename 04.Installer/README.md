@@ -27,3 +27,5 @@ I am continuously working to expand my list of supported applications. The follo
 
 
 If you have any questions, feedback, or application requests, feel free to reach out at mail@szilardshomelab.com. :)
+
+You can find my recommended installation steps here [link](../Recommaned_installation.md).
