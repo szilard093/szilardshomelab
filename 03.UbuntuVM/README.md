@@ -78,3 +78,4 @@
 
 2. Restart the VM to boot into the newly installed Ubuntu 24.04 Server.
 
+In the next step we will run my custom installer menu [Step 04](../04.Installer/README.md).
