@@ -40,10 +40,11 @@
 3. **Disk**:
    - Choose the storage location and size for your VM disk.
    - Use the default settings or adjust as needed.
+   - If You are using an SSD check the SSD emulation and Discard.
    - Click `Next`.
 
 4. **CPU**:
-   - Configure the number of cores and type of CPU.
+   - Configure the number of cores and type of CPU (I prefer HOST).
    - Click `Next`.
 
 5. **Memory**:
@@ -57,14 +58,7 @@
 7. **Confirm**:
    - Review the settings and click `Finish` to create the VM.
 
-### 5. Configure Boot from ISO
-
-1. Select your newly created VM in the Proxmox web interface.
-2. Go to the `Hardware` tab and click on `CD/DVD Drive`.
-3. Choose `Use CD/DVD disc image file (iso)` and select the Ubuntu 24.04 ISO you uploaded.
-4. Click `OK`.
-
-### 6. Start the VM and Install Ubuntu
+### 5. Start the VM and Install Ubuntu
 
 1. Go to the `Summary` tab and click `Start` to power on the VM.
 2. Open the `Console` tab to view the VM console.
@@ -84,14 +78,3 @@
 
 2. Restart the VM to boot into the newly installed Ubuntu 24.04 Server.
 
-## Troubleshooting
-
-- **VM Won't Start**: Ensure that the ISO image is correctly uploaded and that the VM settings are properly configured.
-- **Installation Issues**: Verify the integrity of the downloaded Ubuntu ISO and check for compatibility issues.
-
-## Additional Resources
-
-- [Proxmox Documentation](https://pve.proxmox.com/wiki/Main_Page)
-- [Ubuntu 24.04 Server Release Notes](https://wiki.ubuntu.com/FocalFossa/ReleaseNotes)
-
-Feel free to contribute or suggest improvements to this guide. Happy virtualizing!
