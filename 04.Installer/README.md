@@ -28,4 +28,4 @@ I am continuously working to expand my list of supported applications. The follo
 
 If you have any questions, feedback, or application requests, feel free to reach out at mail@szilardshomelab.com. :)
 
-You can find my recommended installation steps here with a Cloudflare Domain and Cloudflare Tunnel [link](../recommended_installation.md).
+You can find my recommended installation steps here with a Cloudflare Domain and Cloudflare Tunnel [link](../INSTALLATION_GUIDE.md).
